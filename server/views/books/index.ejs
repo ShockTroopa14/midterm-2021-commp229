@@ -18,8 +18,9 @@
                   <th class="text-center">Price</th>
                   <th class="text-center">Author</th>
                   <th class="text-center">Genre</th>
-                  <th class="text-center"></th>
-                  <th class="text-center"></th>
+                  <th class="text-center">Description</th>
+ <th class="text-center">Edit</th>
+  <th class="text-center">Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -30,18 +31,20 @@
                   <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
-
-                  <td class="text-center">
-                    <!-- ------------------------ -->
+                  <td class="text-center"><%= books[count].Description %></td>
+                    <!-- -------------------------->
                     <!-- ADD the EDIT BUTTON HERE -->
-                    <!-- ------------------------ -->
-                  </td>
+                    <!-- --------------------------> 
+                      <td class="text-center"><a href="/edit/<%= books[count]._id %>" class="btn btn-primary btn-sm edit"> Edit</a></td>
+                     
 
-                  <td class="text-center">
+           
                     <!-- ------------------------ -->
                     <!-- ADD the DELETE BUTTON HERE -->
                     <!-- ------------------------ -->
-                  </td>
+                    <td class="text-center"><button type="button" class="delete-btn" data-toggle="modal" data-target="#DeleteContactModal" id="delete-btn" >Delete Contact</button></td>
+                 
+           
                 </tr>
                 <% } %>
               </tbody>

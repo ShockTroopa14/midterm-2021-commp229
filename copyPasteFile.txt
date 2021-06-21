@@ -1,0 +1,20 @@
+  <% for (let count = 0; count < books.length; count++) { %>
+                <tr>
+                  <td><%= books[count].Title %></td>
+                  <td class="text-center">$<%= books[count].Price %></td>
+                  <td class="text-center"><%= books[count].Author %></td>
+                  <td class="text-center"><%= books[count].Genre %></td>
+
+                  <td class="text-center">
+                    <!-- -------------------------->
+                    <!-- ADD the EDIT BUTTON HERE -->
+                    <!-- --------------------------> 
+                  </td>
+
+                  <td class="text-center">
+                    <!-- ------------------------ -->
+                    <!-- ADD the DELETE BUTTON HERE -->
+                    <!-- ------------------------ -->
+                  </td>
+                </tr>
+                <% } %>
