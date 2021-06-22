@@ -18,3 +18,31 @@
                   </td>
                 </tr>
                 <% } %>
+
+
+                ----------------------------
+
+          edit contact
+                     <% if(error === true) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="error-display">
+            some information is not filled in.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% } %>
+
+
+
+      --------------------------------------
+      Add
+        <% if( error === true) { %>
+     
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="error-display">
+            Please make sure all feilds are filled out
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+       
+        <% } %>

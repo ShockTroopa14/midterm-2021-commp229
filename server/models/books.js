@@ -1,15 +1,16 @@
+"use strict"
 let mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // create a model class
-let Book = mongoose.Schema({
-    Title: String,
-    Description: String,
-    Price: Number,
-    Author: String,
-    Genre: String
-},
-{
-  collection: "books"
+let Book = new Schema({
+    Title: { type: String, required: true },
+    Description: { type: String, required: true },
+    Price: { type: Number, required: true },
+    Author: { type: String, required: true },
+    Genre: { type: String, required: true }
 });
 
-module.exports = mongoose.model('Book', Book);
+const model = mongoose.model('Book', Book)
+
+module.exports = model;
