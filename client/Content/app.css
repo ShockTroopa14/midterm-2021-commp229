@@ -5,7 +5,6 @@
     height: 120vh;
     background-image: url('../Assets/images/background-image.jpg');
     opacity: 0.8;
-    overflow: hidden;
 }
 
 body {
@@ -189,11 +188,13 @@ h3 {
 }
 
 #table-container {
-    position: absolute;
-    top: -50px;
+    z-index: 2;
+    position: relative;
+    top: -250px;
     border-radius: 10px;
     border: 1.5px solid black;
-    padding: 20px;
+    padding: 10px;
+    height: 700px;
     margin-left: 40px;
     background-color: #212529;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -231,7 +232,7 @@ h3 {
     transform-origin: center bottom;
 }
 
-@media screen and (max-width: 1299px) {
+@media screen and (max-width: 1530px) {
     .spiderMan-left {
         display: none;
     }
@@ -240,13 +241,15 @@ h3 {
     }
     #table-container {
         position: relative;
-        margin-top: 200px;
+        margin-top: 250px;
     }
 }
 
 @media screen and (max-width: 760px) {
     #table-container {
         margin-left: 0;
+        overflow: scroll;
+        height: 700px;
     }
     #table {
         max-width: none;
