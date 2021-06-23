@@ -256,3 +256,88 @@ h3 {
         width: fit-content;
     }
 }
+
+
+/*
+Add Book CSS
+*/
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#addBook-form {
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #353535;
+    color: whitesmoke;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.venom-giff {
+    position: relative;
+    width: 20%;
+    height: 100px;
+    top: 5px;
+    margin-left: auto;
+    margin-right: 50px;
+    background-size: cover;
+    background-image: url('../Assets/images/venom.gif');
+}
+
+#addBook-container {
+    background-color: #212529;
+}
+
+
+/*
+Edit Book CSS
+*/
+
+#editBook-background {
+    background-color: #212529;
+}
+
+#editBook-form {
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.ironMan-floating {
+    width: 10%;
+    height: 300px;
+    left: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    background-image: url('../Assets/images/IronManFlying.gif');
+    background-size: cover;
+    animation: fadeInIronMan 2s cubic-bezier(.39, -1.05, .58, 1.95);
+    animation-delay: -0.2s;
+    transform-origin: center bottom;
+}
+
+@keyframes fadeInIronMan {
+    0% {
+        z-index: -1;
+        position: absolute;
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+    60% {
+        z-index: -1;
+        position: absolute;
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+    100% {
+        z-index: -1;
+        position: absolute;
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
