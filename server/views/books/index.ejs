@@ -1,17 +1,30 @@
  <%- include('../partials/header.ejs'); %>
-
-    <!-- MAIN CONTENT -->
-    <div class="container">
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <title></title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/client/Content/app.css" />
+   </head>
+   <body id="bookList-body">
+     <!-- MAIN CONTENT -->
+        <div class="image-container">
+          <div class="spiderMan-left" ></div>
+            <div class="spiderMan-right"  ></div>
+          </div>
+    <div class="container" id="backgorund-container">
       <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-          <h3>Favourite Books List </h3>
+        <div class="col-md-offset-1 col-md-10" id="col-container">
+
+        
           <!-- ------------------------ -->
           <!-- FIX THE ADD BUTTON BELOW -->
           <!-- ------------------------ -->
-          <a href="/books/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
-          <div class="table-responsive">
-            <table class="table table-bordered table-striped table-hover">
+          <div class="table-responsive" id="table-container">
+                   <a href="/books/add" class="btn btn-primary" id="add-book"><i class="fa fa-plus"></i> Add a book</a>
+            <table class="table table-bordered table-striped" id="table">
               <thead>
                 <tr>
                   <th>Title</th>
@@ -71,6 +84,11 @@
         </div>
       </div>
     </div>
+   </body>
+ </html>
+ <%- include('../partials/footer.ejs'); %>
+ 
+  
 
 <%- include('../partials/footer.ejs'); %>
 

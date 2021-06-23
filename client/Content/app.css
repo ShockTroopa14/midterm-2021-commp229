@@ -158,27 +158,6 @@ body {
     }
 }
 
-@keyframes fadeOut {
-    100% {
-        z-index: -1;
-        position: relative;
-        opacity: 1;
-        transform: scale3d(1, 1, 1);
-    }
-    60% {
-        z-index: -1;
-        position: relative;
-        opacity: 0;
-        transform: scale3d(.75, .75, 1);
-    }
-    0% {
-        z-index: -1;
-        position: relative;
-        opacity: 0;
-        transform: scale3d(.75, .75, 1);
-    }
-}
-
 @media screen and (max-width: 1000px) {
     .top-characters {
         display: none;
@@ -188,5 +167,89 @@ body {
     }
     .welcomePage-container {
         width: 80%;
+    }
+}
+
+
+/*
+BOOK LIST CSS 
+ */
+
+h3 {
+    text-align: center;
+}
+
+#bookList-body {
+    overflow: hidden;
+    background-color: #353535;
+}
+
+#add-book {
+    margin-bottom: 20px;
+}
+
+#table-container {
+    position: absolute;
+    top: -50px;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    padding: 20px;
+    margin-left: 40px;
+    background-color: #212529;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#table {
+    background-color: darkgray;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.spiderMan-left {
+    background-image: url('../Assets/images/redSpiderman.png');
+    width: 140px;
+    height: 310px;
+    margin-left: 80px;
+    background-size: cover;
+    border: none;
+    animation: fadeIn 2s cubic-bezier(.39, -1.05, .58, 1.95);
+    animation-delay: -0.2s;
+    transform-origin: center bottom;
+}
+
+.spiderMan-right {
+    background-image: url('../Assets/images/darkSpiderman.png');
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    background-size: cover;
+    animation: fadeIn 2s cubic-bezier(.39, -1.05, .58, 1.95);
+    animation-delay: -0.2s;
+    transform-origin: center bottom;
+}
+
+@media screen and (max-width: 1299px) {
+    .spiderMan-left {
+        display: none;
+    }
+    .spiderMan-right {
+        display: none;
+    }
+    #table-container {
+        position: relative;
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #table-container {
+        margin-left: 0;
+    }
+    #table {
+        max-width: none;
+        width: fit-content;
     }
 }
