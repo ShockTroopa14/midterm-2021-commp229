@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 .background-container {
     padding: 0px;
     margin: 0px;
@@ -24,7 +25,10 @@ body {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
-    background-color: darkgray;
+    background-color: #212529;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    color: black;
+    font-family: 'Luckiest Guy', cursive;
     /* animation: fadeIn 2s cubic-bezier(.39, -1.05, .58, 1.95);
     animation-delay: -0.2s;
     transform-origin: center bottom; */
@@ -56,7 +60,7 @@ body {
 #ironMan {
     top: -140px;
     left: -150px;
-    width: 50%;
+    width: 370px;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -75,7 +79,7 @@ body {
     background-size: cover;
     transform: rotate(-120deg);
     background-size: cover;
-    width: 65%;
+    width: 500px;
     background-image: url('../Assets/images/red_hulk.png');
 }
 
@@ -84,7 +88,6 @@ body {
     right: -140px;
     position: absolute;
     -ms-transform: rotate(120deg);
-    width: 40%;
     /* IE 9 */
     background-size: cover;
     transform: rotate(120deg);
@@ -102,7 +105,6 @@ body {
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
     -webkit-animation-fill-mode: both;
-    width: 35%;
     animation-fill-mode: both;
 }
 
@@ -114,7 +116,6 @@ body {
     animation-delay: -0.2s;
     transform-origin: center bottom; */
     padding: 10px;
-    border: 2px solid black;
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -123,12 +124,11 @@ body {
     text-align: center;
     padding: 10px;
     height: 200px;
-    border: 2px solid black;
+    margin-top: 50px;
 }
 
 .top-characters {
     padding: 10px;
-    border: 2px solid black;
     display: grid;
     grid-template-columns: auto auto auto;
     /* animation: fadeIn 2s cubic-bezier(.39, -1.05, .58, 1.95);
@@ -155,5 +155,38 @@ body {
         position: relative;
         opacity: 1;
         transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        z-index: -1;
+        position: relative;
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+    60% {
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+    0% {
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .top-characters {
+        display: none;
+    }
+    .bottom-characters {
+        display: none;
+    }
+    .welcomePage-container {
+        width: 80%;
     }
 }
