@@ -1,3 +1,11 @@
+/* 
+Name: Jake Alexander Green
+Student Number: 301129153
+Date: 6/24/2021
+
+index page with the routes for homepage and comic books
+*/
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();

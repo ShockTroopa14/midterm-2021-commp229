@@ -1,3 +1,11 @@
+/* 
+Name: Jake Alexander Green
+Student Number: 301129153
+Date: 6/24/2021
+
+book schema with the properties.
+*/
+
 "use strict"
 let mongoose = require('mongoose');
 const Schema = mongoose.Schema;

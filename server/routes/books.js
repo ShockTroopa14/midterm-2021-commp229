@@ -1,3 +1,12 @@
+/* 
+Name: Jake Alexander Green
+Student Number: 301129153
+Date: 6/24/2021
+
+routes for the website and code for adding the comic books
+*/
+
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -14,7 +23,7 @@ router.get('/', (req, res, next) => {
 
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
-    res.render('../views/books/details', { title: "Add Book" })
+    res.render('../views/books/details', { title: "Add Comic Book" })
 
     /*****************
      * ADD CODE HERE *
@@ -48,7 +57,7 @@ router.get('/edit/:id', async(req, res, next) => {
     let id = req.params.id
     let editBook = await Book.findById(id);
     console.log("BOOK", editBook)
-    res.render('../views/books/editBook', { title: "Edit Books", editBook: editBook });
+    res.render('../views/books/editBook', { title: "Edit Comic Books", editBook: editBook });
     /*****************
      * ADD CODE HERE *
      *****************/
