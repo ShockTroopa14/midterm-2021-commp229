@@ -83,6 +83,7 @@ body {
 }
 
 #deadpool {
+    width: 300px;
     top: 100px;
     right: -140px;
     position: absolute;
