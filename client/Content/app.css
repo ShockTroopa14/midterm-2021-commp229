@@ -136,6 +136,20 @@ body {
 } */
 }
 
+
+/*
+Model pooup css
+*/
+
+.modal-backdrop {
+    position: relative;
+}
+
+
+/*
+Model pooup end
+*/
+
 @keyframes fadeIn {
     0% {
         z-index: -1;
